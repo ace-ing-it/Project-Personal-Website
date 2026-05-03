@@ -1,54 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Blog | Stacy Valerie</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="#4C186C" text="white" link="white" vlink="white">
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container header-flex">
+                <div class="logo">
+                    <span>Stacy<span class="dot">.</span></span>
+                </div>
+                <nav class="main-nav" id="mainNav">
+                    <a href="index.html">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="blog.html" class="active">Blog</a>
+                    <a href="contact.html">Contact</a>
+                    <button class="mobile-close" id="closeMenu" aria-label="Close menu">✕</button>
+                </nav>
+                <button class="mobile-menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+            </div>
+        </header>
 
-<h1 align="center">Blog</h1>
+        <main>
+            <div class="container">
+                <h1 align="center" style="margin-bottom: 2rem;">Blog</h1>
+                
+                <div class="blog-container">
+                    <!-- VIDEO 1 -->
+                    <div class="blog-entry">
+                        <h3>📜 Sejarah Majapahit</h3>
+                        <div class="video-row">
+                            <div class="video-item">
+                                <video class="blog-video" width="400" controls>
+                                    <source src="web-vid/Majapahit.mp4" type="video/mp4">
+                                    Browser tidak mendukung video.
+                                </video>
+                            </div>
+                            <div class="blog-text">
+                                <p>I love learning about history, my favorite history youtube channel is Extra History. This is one of their videos about the Majapahit empire, its rise and legacy in Nusantara.</p>
+                            </div>
+                        </div>
+                    </div>
 
-<!-- VIDEO 1 -->
-<h3>Sejarah Majapahit</h3>
+                    <!-- VIDEO 2 -->
+                    <div class="blog-entry">
+                        <h3>💻 Video Belajar Coding</h3>
+                        <div class="video-row">
+                            <div class="video-item">
+                                <video class="blog-video" width="400" controls>
+                                    <source src="web-vid/website.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="blog-text">
+                                <p>Ini adalah video of somebody building their own website with React. I hope mine can look that good one day. Watching tutorials like this inspires me to keep improving my frontend skills.</p>
+                            </div>
+                        </div>
+                    </div>
 
-<video width="400" controls>
-    <source src="web-vid/Majapahit.mp4" type="video/mp4">
-    Browser tidak mendukung video.
-</video>
+                    <!-- VIDEO 3 -->
+                    <div class="blog-entry">
+                        <h3>🎨 Animation & EPIC: The Musical</h3>
+                        <div class="video-row">
+                            <div class="video-item">
+                                <video class="blog-video" width="400" controls>
+                                    <source src="web-vid/animation.mp4" type="video/mp4">
+                                </video>
+                                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Animation Tutorial</p>
+                            </div>
+                            <div class="video-item">
+                                <video class="blog-video" width="400" controls>
+                                    <source src="web-vid/epic.mp4" type="video/mp4">
+                                </video>
+                                <p style="font-size: 0.85rem; margin-top: 0.5rem;">EPIC: The Musical Fan Animation</p>
+                            </div>
+                        </div>
+                        <p>I LOVE animation. The video on the 1st one is a tutorial & the 2nd is an animation based on a song from the musical "EPIC: The Musical". Animation combines art, storytelling, and technology — everything I admire!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-<p>I love learning about history, my favorite history youtube channel is Extra History. This is one of their videos</p>
+        <hr class="section-divider">
 
-<br><br>
+        <div class="bottom-nav">
+            <a href="index.html">Home</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="blog.html">Blog</a> |
+            <a href="contact.html">Contact</a>
+        </div>
 
-<!-- VIDEO 2 -->
-<h3>Video Belajar Coding</h3>
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Stacy Valerie. Personal Website.</p>
+            </div>
+        </footer>
+    </div>
 
-<video width="400" controls>
-    <source src="web-vid/website.mp4" type="video/mp4">
-</video>
-
-<p> Ini adalah video of somebody building their own website with React. I hope mine can look that good one day </p>
-
-<br><br>
-
-<!-- VIDEO 3 -->
-<h3>Animation</h3>
-
-<video width="400" controls>
-    <source src="web-vid/animation.mp4" type="video/mp4">
-</video>
-
-<video width="400" controls>
-    <source src="web-vid/epic.mp4" type="video/mp4">
-</video>
-
-<p>I LOVE animation. The video on the 1st one is a tutorial & the 2nd is an animation based on a song from the musical "EPIC: The Musical"</p>
-
-<br><hr>
-
-<a href="index.html">Home</a> |
-<a href="gallery.html">Gallery</a> |
-<a href="blog.html">Blog</a> |
-<a href="contact.html">Contact</a>
-
+    <script src="script.js"></script>
 </body>
 </html>

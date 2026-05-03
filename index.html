@@ -1,40 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Home | Stacy Valerie</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="#4C186C" text="white" link="white" vlink="white">
-    
-<table width="100%">
-<tr>
-    <!-- TEXT -->
-    <td align="left" width="60%">
-        <h1>Welcome!</h1>
-        <h2>I'm Stacy Valerie Tirza Rombepajung</h2>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container header-flex">
+                <div class="logo">
+                    <span>Stacy<span class="dot">.</span></span>
+                </div>
+                <nav class="main-nav" id="mainNav">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                    <button class="mobile-close" id="closeMenu" aria-label="Close menu">✕</button>
+                </nav>
+                <button class="mobile-menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+            </div>
+        </header>
 
-        <p>
-            Ini adalah blog pribadi saya. Saya adalah mahasiswa di Universitas Sam Ratulangi 
-            di Program Studi Teknik Informatika Angkatan 2024. 
-            Building this website is a way for me to learn HTML and to develop my skills as a programmer.
-        </p>
+        <main>
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-text">
+                        <h1 class="glow-text">Welcome!</h1>
+                        <h2>I'm Stacy Valerie Tirza Rombepajung</h2>
+                        <p>Ini adalah blog pribadi saya. Saya adalah mahasiswa di Universitas Sam Ratulangi di Program Studi Teknik Informatika Angkatan 2024. Building this website is a way for me to learn HTML and to develop my skills as a programmer.</p>
+                        <div class="highlight-box">
+                            <h3>✨ Thanks For Visiting! ✨</h3>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="web-img/pfp.jpeg" alt="Stacy profile picture" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </main>
 
-        <h3>Thanks For Visiting!</h3>
-    </td>
+        <hr class="section-divider">
 
-    <!-- IMAGE -->
-    <td align="right" width="40%">
-        <img src="web-img/pfp.jpeg" width="300">
-    </td>
-</tr>
-</table>
+        <div class="bottom-nav">
+            <a href="index.html">Home</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="blog.html">Blog</a> |
+            <a href="contact.html">Contact</a>
+        </div>
 
-<br><hr>
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Stacy Valerie. Personal Website.</p>
+            </div>
+        </footer>
+    </div>
 
-<!-- NAVIGATION -->
-<a href="index.html">Home</a> |
-<a href="gallery.html">Gallery</a> |
-<a href="blog.html">Blog</a> |
-<a href="contact.html">Contact</a>
-
+    <script src="script.js"></script>
 </body>
 </html>
