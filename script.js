@@ -276,4 +276,65 @@ document.addEventListener('DOMContentLoaded', function() {
             img.setAttribute('alt', 'Personal media gallery');
         }
     });
+
+        // ===== LIGHTBOX / FULL PHOTO FUNCTIONALITY =====
+    // Get the lightbox elements
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeLightbox = document.querySelector('.lightbox-close');
+    
+    // Get all gallery images
+    const galleryImages = document.querySelectorAll('.gallery-card');
+    
+    // Add click event to each gallery card
+    galleryImages.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Don't trigger if clicking on the caption area that might bubble? but it's fine
+            const img = this.querySelector('.gallery-img');
+            const caption = this.querySelector('.gallery-caption');
+            
+            if (img) {
+                lightbox.style.display = 'block';
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                
+                if (caption) {
+                    lightboxCaption.textContent = caption.textContent;
+                } else {
+                    lightboxCaption.textContent = '';
+                }
+                
+                // Prevent body scrolling when lightbox is open
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+    
+    // Close lightbox when clicking on close button
+    if (closeLightbox) {
+        closeLightbox.addEventListener('click', function() {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = '';
+        });
+    }
+    
+    // Close lightbox when clicking outside the image (on the background)
+    if (lightbox) {
+        lightbox.addEventListener('click', function(e) {
+            // Only close if clicking on the lightbox background, not on the image itself
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+    }
+    
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox && lightbox.style.display === 'block') {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    });
 });

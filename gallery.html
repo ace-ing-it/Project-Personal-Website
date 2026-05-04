@@ -27,9 +27,18 @@
         <main>
             <div class="container">
                 <h1 class="gallery-title">Gallery</h1>
-                <p class="gallery-sub">Collection of photos</p>
+                <p class="gallery-sub">Collection of photos - Hover over any photo to see it full size</p>
 
                 <div class="gallery-grid">
+                    <!-- TEMPLATE CARD - Copy paste block ini untuk menambah foto baru -->
+                    <!-- 
+                    <div class="gallery-card">
+                        <img src="web-img/namafoto.jpg" alt="Deskripsi foto" class="gallery-img">
+                        <div class="gallery-caption">Judul/Caption Foto</div>
+                    </div>
+                    -->
+                    
+                    <!-- BARIS 1 -->
                     <div class="gallery-card">
                         <img src="web-img/christmas.jpeg" alt="Christmas 2025 celebration" class="gallery-img">
                         <div class="gallery-caption">Christmas 2025</div>
@@ -40,6 +49,7 @@
                         <div class="gallery-caption">Favorite food</div>
                     </div>
                     
+                    <!-- BARIS 2 -->
                     <div class="gallery-card">
                         <img src="web-img/friends.jpeg" alt="Friend group photo" class="gallery-img">
                         <div class="gallery-caption">My friend group!</div>
@@ -50,6 +60,7 @@
                         <div class="gallery-caption">Scenery of the Electrical Engineering Major building</div>
                     </div>
                     
+                    <!-- BARIS 3 -->
                     <div class="gallery-card">
                         <img src="web-img/bestie.jpeg" alt="Best friend from high school graduation" class="gallery-img">
                         <div class="gallery-caption">Me and my best friend (High School Graduation)</div>
@@ -60,6 +71,7 @@
                         <div class="gallery-caption">Me and fellow contestants competing in NUDC 2026 UNSRAT</div>
                     </div>
                     
+                    <!-- BARIS 4 -->
                     <div class="gallery-card">
                         <img src="web-img/fave-pic.jpeg" alt="Favorite look photo" class="gallery-img">
                         <div class="gallery-caption">My favorite look</div>
@@ -69,6 +81,28 @@
                         <img src="web-img/toys.jpeg" alt="Gifts for best friend" class="gallery-img">
                         <div class="gallery-caption">Gifts I gave to my bff from 2024 that she still keeps to this day</div>
                     </div>
+
+                    <!-- =============================================== -->
+                    <!-- TEMPAT UNTUK MENAMBAH FOTO BARU - Copy block di bawah ini -->
+                    <!-- =============================================== -->
+                    
+                    <!-- Contoh tambahan foto baru - hapus comment untuk aktifkan -->
+                    <!--
+                    <div class="gallery-card">
+                        <img src="web-img/foto-baru-1.jpg" alt="Deskripsi foto baru 1" class="gallery-img">
+                        <div class="gallery-caption">Caption untuk foto baru 1</div>
+                    </div>
+                    
+                    <div class="gallery-card">
+                        <img src="web-img/foto-baru-2.jpg" alt="Deskripsi foto baru 2" class="gallery-img">
+                        <div class="gallery-caption">Caption untuk foto baru 2</div>
+                    </div>
+                    
+                    <div class="gallery-card">
+                        <img src="web-img/foto-baru-3.jpg" alt="Deskripsi foto baru 3" class="gallery-img">
+                        <div class="gallery-caption">Caption untuk foto baru 3</div>
+                    </div>
+                    -->
                 </div>
             </div>
         </main>
@@ -87,6 +121,13 @@
                 <p>&copy; 2025 Stacy Valerie. Personal Website.</p>
             </div>
         </footer>
+    </div>
+
+    <!-- LIGHTBOX / FULL PHOTO MODAL -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
     </div>
 
     <script src="script.js"></script>
