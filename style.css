@@ -274,18 +274,46 @@ header {
     background: linear-gradient(145deg, #5e2382, #3f0f5c);
     border-radius: 48px;
     padding: 2rem 2rem;
-    text-align: center;
+    text-align: left;
     box-shadow: 0 20px 30px rgba(0,0,0,0.3);
 }
 
 .contact-detail {
-    font-size: 1.2rem;
-    margin: 1rem 0;
+    margin: 1.2rem 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
     flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.contact-label {
+    font-weight: 600;
+    min-width: 110px;
+    font-size: 1.1rem;
+    color: #ffd966;
+    letter-spacing: 0.5px;
+}
+
+.contact-value {
+    font-size: 1.1rem;
+    color: white;
+    word-break: break-word;
+    flex: 1;
+}
+
+/* Hover effect untuk value yang bisa di-copy */
+.contact-value {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 4px 8px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.contact-value:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(4px);
 }
 
 .contact-icon {
