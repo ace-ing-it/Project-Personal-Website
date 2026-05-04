@@ -150,13 +150,21 @@ header {
     transform: scale(1.02);
 }
 
+/* ===== HIGHLIGHT BOX (Thanks For Visiting) ===== */
 .highlight-box {
     background: rgba(255, 215, 120, 0.2);
-    padding: 0.8rem 1rem;
+    padding: 0.4rem 1rem;
     border-radius: 40px;
     display: inline-block;
     margin-top: 0.5rem;
     backdrop-filter: blur(4px);
+}
+
+.highlight-box h3 {
+    font-size: 0.95rem;
+    margin: 0;
+    color: #ffd966;
+    letter-spacing: 1px;
 }
 
 .glow-text {
