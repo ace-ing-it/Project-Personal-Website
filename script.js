@@ -130,15 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // create copy buttons if we find phone/email elements to enhance UX but preserve original style
     const contactContainer = document.querySelector('.contact-card');
     if (contactContainer && !document.querySelector('.copy-notice')) {
-        // To avoid duplicate, add small copy hint
-        const copyHint = document.createElement('p');
-        copyHint.style.fontSize = '0.8rem';
-        copyHint.style.marginTop = '1rem';
-        copyHint.style.opacity = '0.7';
-        copyHint.innerHTML = '💡 Klik nomor WA atau email untuk menyalin';
-        copyHint.classList.add('copy-notice');
-        contactContainer.appendChild(copyHint);
-        
         // find whatsapp number and email
         const whatsElem = Array.from(contactContainer.querySelectorAll('div, p')).find(el => el.innerText.includes('WhatsApp'));
         const emailElem = Array.from(contactContainer.querySelectorAll('div, p')).find(el => el.innerText.includes('Gmail'));
