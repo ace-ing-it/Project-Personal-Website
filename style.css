@@ -581,3 +581,75 @@ footer {
 .gallery-card:hover::after {
     opacity: 1;
 }
+/* ===== TAB BUTTONS STYLES ===== */
+.tab-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.6rem 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    font-family: inherit;
+}
+
+.tab-btn:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.tab-btn.active {
+    color: #ffd966;
+    background: rgba(255, 217, 102, 0.15);
+    border-bottom: 2px solid #ffd966;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeInTab 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeInTab {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-content h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #ffd966;
+    font-size: 1.5rem;
+}
+
+/* Contact link styles */
+.contact-link {
+    color: #ffd966;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.contact-link:hover {
+    color: white;
+    text-decoration: underline;
+}
