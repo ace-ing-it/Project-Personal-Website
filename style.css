@@ -377,7 +377,7 @@ header {
     }
 }
 
-/* CONTACT DETAIL - DENGAN ":" SEJAJAR */
+/* CONTACT DETAIL - DENGAN ":" SEJAJAR DAN ADA SPASI */
 .contact-detail {
     margin: 0.8rem 0;
     padding: 0.4rem 0;
@@ -402,7 +402,7 @@ header {
     word-break: break-word;
     flex: 1;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding-left: 8px;
+    padding-left: 12px;  /* SPASI SETELAH ":" */
 }
 
 /* Contact link styles */
