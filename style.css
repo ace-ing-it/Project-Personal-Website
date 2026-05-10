@@ -300,11 +300,11 @@ header {
 
 /* ===== CONTACT PAGE STYLES ===== */
 .contact-card {
-    max-width: 650px;
+    max-width: 700px;
     margin: 2rem auto;
     background: linear-gradient(145deg, #5e2382, #3f0f5c);
     border-radius: 48px;
-    padding: 2rem 2rem;
+    padding: 2rem 2.5rem;
     text-align: left;
     box-shadow: 0 20px 30px rgba(0,0,0,0.3);
 }
@@ -315,30 +315,107 @@ header {
     text-align: center;
 }
 
+/* TAB BUTTONS STYLES */
+.tab-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.6rem 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.tab-btn:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.tab-btn.active {
+    color: #ffd966;
+    background: rgba(255, 217, 102, 0.15);
+    border-bottom: 2px solid #ffd966;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeInTab 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #ffd966;
+    font-size: 1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@keyframes fadeInTab {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CONTACT DETAIL - DENGAN ":" SEJAJAR */
 .contact-detail {
-    margin: 1.2rem 0;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 0.8rem 0;
+    padding: 0.4rem 0;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
 }
 
 .contact-label {
+    width: 180px;
+    flex-shrink: 0;
     font-weight: 600;
-    min-width: 110px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #ffd966;
     letter-spacing: 0.5px;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .contact-value {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: white;
     word-break: break-word;
     flex: 1;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-left: 8px;
+}
+
+/* Contact link styles */
+.contact-link {
+    color: #ffd966;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.contact-link:hover {
+    color: white;
+    text-decoration: underline;
 }
 
 /* Contact link styles */
