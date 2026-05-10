@@ -8,7 +8,7 @@
 body {
     background-color: #4C186C;
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.6;
     min-height: 100vh;
 }
@@ -21,6 +21,10 @@ body {
 }
 
 /* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -43,6 +47,7 @@ h3 {
 p {
     margin-bottom: 1rem;
     font-size: 1.05rem;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* ===== HEADER & NAVIGATION ===== */
@@ -66,6 +71,7 @@ header {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .logo .dot {
@@ -89,6 +95,7 @@ header {
     padding: 0.5rem 0;
     transition: all 0.3s ease;
     border-bottom: 2px solid transparent;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .main-nav a:hover {
@@ -112,6 +119,7 @@ header {
     padding: 0 12px;
     border-radius: 8px;
     background-color: rgba(255,255,255,0.1);
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .mobile-close {
@@ -165,6 +173,7 @@ header {
     margin: 0;
     color: #ffd966;
     letter-spacing: 1px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .glow-text {
@@ -199,12 +208,33 @@ header {
     text-align: center;
     transition: all 0.25s ease;
     backdrop-filter: blur(2px);
+    cursor: pointer;
+    position: relative;
 }
 
 .gallery-card:hover {
     background: rgba(255, 255, 255, 0.15);
     transform: translateY(-5px);
     box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.gallery-card:hover::after {
+    opacity: 1;
+}
+
+.gallery-card::after {
+    content: "🔍";
+    position: absolute;
+    bottom: 60px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 8px;
+    border-radius: 30px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .gallery-img {
@@ -220,6 +250,7 @@ header {
     font-weight: 500;
     font-size: 0.95rem;
     color: #f0e2c5;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* ===== BLOG PAGE VIDEO STYLES ===== */
@@ -267,15 +298,21 @@ header {
     margin-top: 0.8rem;
 }
 
-/* ===== CONTACT PAGE ===== */
+/* ===== CONTACT PAGE STYLES ===== */
 .contact-card {
-    max-width: 600px;
+    max-width: 650px;
     margin: 2rem auto;
     background: linear-gradient(145deg, #5e2382, #3f0f5c);
     border-radius: 48px;
     padding: 2rem 2rem;
     text-align: left;
     box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+}
+
+.contact-card h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .contact-detail {
@@ -293,6 +330,7 @@ header {
     font-size: 1.1rem;
     color: #ffd966;
     letter-spacing: 0.5px;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .contact-value {
@@ -300,35 +338,153 @@ header {
     color: white;
     word-break: break-word;
     flex: 1;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* Hover effect untuk value yang bisa di-copy */
-.contact-value {
-    cursor: pointer;
-    transition: all 0.2s ease;
-    padding: 4px 8px;
-    border-radius: 8px;
-    display: inline-block;
-}
-
-.contact-value:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateX(4px);
-}
-
-.contact-icon {
-    font-size: 1.8rem;
-}
-
-.contact-card a {
+/* Contact link styles */
+.contact-link {
     color: #ffd966;
     text-decoration: none;
-    border-bottom: 1px dashed #ffd966;
+    transition: all 0.2s ease;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.contact-card a:hover {
+.contact-link:hover {
     color: white;
-    border-bottom-color: white;
+    text-decoration: underline;
+}
+
+/* ===== TAB BUTTONS STYLES ===== */
+.tab-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1.5rem 0 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.6rem 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.tab-btn:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.tab-btn.active {
+    color: #ffd966;
+    background: rgba(255, 217, 102, 0.15);
+    border-bottom: 2px solid #ffd966;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeInTab 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #ffd966;
+    font-size: 1.5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@keyframes fadeInTab {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== LIGHTBOX / FULL PHOTO MODAL ===== */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    animation: fadeInLightbox 0.3s ease;
+}
+
+@keyframes fadeInLightbox {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.lightbox-content {
+    display: block;
+    max-width: 90%;
+    max-height: 85%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    object-fit: contain;
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 40px;
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 2001;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.lightbox-close:hover {
+    color: #ffb347;
+    transform: scale(1.1);
 }
 
 /* ===== GENERAL COMPONENTS ===== */
@@ -351,6 +507,7 @@ header {
     text-decoration: none;
     margin: 0 5px;
     font-weight: 500;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .bottom-nav a:hover {
@@ -365,6 +522,10 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.2);
     font-size: 0.85rem;
     opacity: 0.8;
+}
+
+footer p {
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -427,6 +588,7 @@ footer {
         top: 20px;
         right: 20px;
         cursor: pointer;
+        font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
     
     .main-nav a {
@@ -465,7 +627,7 @@ footer {
     }
 }
 
-/* ===== additional subtle animation ===== */
+/* ===== ANIMATIONS ===== */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(15px);}
     to { opacity: 1; transform: translateY(0);}
@@ -473,183 +635,4 @@ footer {
 
 .hero-grid, .gallery-card, .blog-entry, .contact-card {
     animation: fadeIn 0.6s ease forwards;
-}
-
-/* ===== LIGHTBOX / FULL PHOTO MODAL ===== */
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(8px);
-    cursor: pointer;
-    animation: fadeInLightbox 0.3s ease;
-}
-
-@keyframes fadeInLightbox {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-.lightbox-content {
-    display: block;
-    max-width: 90%;
-    max-height: 85%;
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 16px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    object-fit: contain;
-}
-
-.lightbox-caption {
-    position: absolute;
-    bottom: 30px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: white;
-    font-size: 1.1rem;
-    padding: 12px 20px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 40px;
-    width: fit-content;
-    margin: 0 auto;
-    font-weight: 500;
-    backdrop-filter: blur(4px);
-}
-
-.lightbox-close {
-    position: absolute;
-    top: 25px;
-    right: 35px;
-    color: white;
-    font-size: 45px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    z-index: 2001;
-}
-
-.lightbox-close:hover {
-    color: #ffb347;
-    transform: scale(1.1);
-}
-
-/* Hover effect pada gallery card - menunjukkan bahwa foto bisa diklik untuk full size */
-.gallery-card {
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.gallery-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-}
-
-.gallery-card:hover .gallery-img {
-    filter: brightness(1.05);
-}
-
-/* Indikator bahwa foto bisa diklik untuk full screen */
-.gallery-card::after {
-    content: "🔍";
-    position: absolute;
-    bottom: 60px;
-    right: 15px;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 5px 8px;
-    border-radius: 30px;
-    font-size: 12px;
-    opacity: 0;
-    transition: opacity 0.3s;
-    pointer-events: none;
-}
-
-.gallery-card {
-    position: relative;
-}
-
-.gallery-card:hover::after {
-    opacity: 1;
-}
-/* ===== TAB BUTTONS STYLES ===== */
-.tab-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin: 1.5rem 0 2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding-bottom: 0.5rem;
-}
-
-.tab-btn {
-    background: transparent;
-    border: none;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 0.6rem 1.8rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 30px;
-    font-family: inherit;
-}
-
-.tab-btn:hover {
-    color: white;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.tab-btn.active {
-    color: #ffd966;
-    background: rgba(255, 217, 102, 0.15);
-    border-bottom: 2px solid #ffd966;
-}
-
-.tab-content {
-    display: none;
-    animation: fadeInTab 0.3s ease;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-@keyframes fadeInTab {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.tab-content h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: #ffd966;
-    font-size: 1.5rem;
-}
-
-/* Contact link styles */
-.contact-link {
-    color: #ffd966;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.contact-link:hover {
-    color: white;
-    text-decoration: underline;
 }
